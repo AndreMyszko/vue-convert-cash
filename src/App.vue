@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import FixedMenu from './components/FixedMenu.vue'
 </script>
 
 <template>
@@ -8,10 +8,17 @@ import HelloWorld from './components/HelloWorld.vue'
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <FixedMenu msg="
+        That is the way to convert cash! 
+        We are using USD as the default currency value. 
+        All other values are based on a $1 hate in the 'Currency Value' page. 
+        All types can be converted between each other int the 'Currency Exchange' page.
+        Feel free to get started!        
+      " />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/">Currency Exchange</RouterLink>
+        <RouterLink to="/value">Currency Value</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
@@ -60,7 +67,7 @@ nav a:first-of-type {
   header {
     display: flex;
     place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+    padding-right: calc(var(--section-gap) / 3);
   }
 
   .logo {
