@@ -6,21 +6,21 @@ import EcosystemIcon from './icons/IconEcosystem.vue'
 <template>
     <CustomItem>
         <template #icon>
-            <EcosystemIcon />
         </template>
-        <template #heading>Convert Currency</template>
-        <div>***INSERT THE CURRENCY EXCHANGE FOR HERE***</div>
     </CustomItem>
+    
     <CustomItem>
         <template #icon>
             <EcosystemIcon />
         </template>
-        <template #heading>Usage</template>
-        <p>1- Choose the currency you want to exchange 'FROM'</p>
-        <p>2- Choose the currency you want to exchange 'TO'</p>
-        <P>3- Provide the exchange 'AMOUNT'</P>
-        <P>4- Click on 'Exchange' button and check the exchange value</P>
+        <template #heading>Currency Exchange</template>
+        <div>***INSERT THE CURRENCY EXCHANGE FOR HERE***</div>
         <br>
-        <p>PS.: To many requests can return an internal error for 'Too many requests', wait a moment and try agin.</p>
+        <p>PS.: Too many requests can exaust the application some times, wait for a while and reload the page.</p>
+    </CustomItem>
+
+    <CustomItem>
+        <template #icon>
+        </template>
     </CustomItem>
 </template>

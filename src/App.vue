@@ -6,13 +6,12 @@ import FixedMenu from './components/FixedMenu.vue'
 <template>
   <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
     <div class="wrapper">
       <FixedMenu msg="
-        That is the way to convert cash! 
-        We are using USD as the default currency value. 
+        That is the way we convert cash! 
+        Using USD as the default currency value. 
         All other values are based on a $1 hate in the 'Currency Value' page. 
-        All types can be converted between each other int the 'Currency Exchange' page.
+        All types can be converted between each other in the 'Currency Exchange' page.
         Feel free to get started!        
       " />
 
@@ -45,8 +44,17 @@ nav {
   margin-top: 2rem;
 }
 
+nav a {
+  /* color: var(--color-text); */
+  color: var(--color-text);
+  border: 1px solid black;
+  border-radius: 1px;
+}
+
 nav a.router-link-exact-active {
   color: var(--color-text);
+  background-color: #1f1f22;
+  box-shadow: 300px;
 }
 
 nav a.router-link-exact-active:hover {
@@ -55,13 +63,15 @@ nav a.router-link-exact-active:hover {
 
 nav a {
   display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+  padding: 0.8rem 0.5rem;
+  border-radius: 5px;
+  margin: 0 0.2rem;
+  /* border-left: 1px solid var(--color-border); */
 }
 
-nav a:first-of-type {
+/* nav a:first-of-type {
   border: 0;
-}
+} */
 
 @media (min-width: 1024px) {
   header {
