@@ -2,7 +2,6 @@
 import { ref, onMounted } from 'vue';
 import axios from 'axios';
 import CustomItem from './CustomItem.vue';
-import EcosystemIcon from './icons/IconEcosystem.vue';
 
 interface ExchangeResult {
     from: string;
@@ -47,37 +46,28 @@ onMounted(() => {
 </script>
 
 <template>
-    <CustomItem>
-        <template #icon></template>
-        <template #heading></template>
-        <h1>Currency Exchange</h1>
-    </CustomItem>
-
-    <CustomItem>
-        <template #icon>
-            <EcosystemIcon />
-        </template>
-        <template #heading></template>
-        <br>
+    <div id="currency-exchange">
         <div>
             <form @submit.prevent="fetchExchangeRate">
                 <div>
                     <label>
-                        FROM
+                        FROM<br>
                         <select v-model="fromCurrency" required>
                             <option v-for="currency in currencies" :key="currency" :value="currency">{{ currency }}
                             </option>
                         </select>
                     </label>
+                    <br>
                     <label>
-                        TO
+                        TO<br>
                         <select v-model="toCurrency" required>
                             <option v-for="currency in currencies" :key="currency" :value="currency">{{ currency }}
                             </option>
                         </select>
                     </label>
+                    <br>
                     <label>
-                        AMOUNT
+                        AMOUNT<br>
                         <input v-model="amount" type="number" step="1.00000000" required />
                     </label>
                 </div>
@@ -89,15 +79,15 @@ onMounted(() => {
         <div v-if="exchangeResult">
             <h1 style="color: whitesmoke;">{{ exchangeResult.exchange }} {{exchangeResult.to }}</h1>
         </div>
-    </CustomItem>
-
-    <CustomItem>
-        <template #icon></template>
-        <template #heading></template>
-    </CustomItem>
+    </div>
 </template>
 
 <style scoped>
+#currency-exchange{
+    padding: 25px;
+    margin: auto;
+}
+
 input {
     border-radius: 3px;
     padding-left: 10px;
@@ -129,4 +119,11 @@ button {
 button:hover{
     background-color: #222020;
 }
+
+@media (min-width: 1024px) {
+    #currency-exchange {
+        width: 350px;
+    }
+}
+
 </style>

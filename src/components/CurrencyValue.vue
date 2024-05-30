@@ -24,7 +24,6 @@
                 </tr>
             </tbody>
         </table>
-        <br>
     </div>
 </template>
 
@@ -73,6 +72,11 @@ export default defineComponent({
 </script>
 
 <style scoped>
+#currency-values{
+    padding: 25px;
+    margin: auto;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -96,5 +100,11 @@ input {
     width: 100%;
     background-color: #222020;
     height: 28px;
+}
+
+@media (min-width: 1024px) {
+    #currency-values {
+        width: 500px;
+    }
 }
 </style>
