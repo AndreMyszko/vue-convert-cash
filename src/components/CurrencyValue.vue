@@ -2,11 +2,13 @@
     <div id="currency-values">
         <br>
         <h1>Currency Value</h1>
-        <p>All currencies values is based in USD in a $1.00 exchange rate. </p>
+        <p>Currecies based in USD $1.00 exchange rate. </p>
         <br>
-        <p>Filter</p>
-        <input type="text" v-model="filter" placeholder="filter by Currency Type" />
-        <br>
+        <p>
+            <label>Filter
+                <input type="text" v-model="filter" placeholder="filter by Currency Type" />
+            </label>
+        </p>
         <br>
         <table>
             <thead>
@@ -23,14 +25,12 @@
             </tbody>
         </table>
         <br>
-        <p>PS.: When the application receive too many requests it will not retrive the currencies values for a while. If it happens wait for a few minutes and try agin.</p>
-        <br>
     </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref, onMounted, computed } from 'vue';
-import api from '../services/api';
+import api from '@/services/api';
 
 export default defineComponent({
     name: 'CurrencyValues',

@@ -45,7 +45,6 @@ nav {
 }
 
 nav a {
-  /* color: var(--color-text); */
   color: var(--color-text);
   border: 1px solid black;
   border-radius: 1px;
@@ -66,12 +65,7 @@ nav a {
   padding: 0.8rem 0.5rem;
   border-radius: 5px;
   margin: 0 0.2rem;
-  /* border-left: 1px solid var(--color-border); */
 }
-
-/* nav a:first-of-type {
-  border: 0;
-} */
 
 @media (min-width: 1024px) {
   header {
